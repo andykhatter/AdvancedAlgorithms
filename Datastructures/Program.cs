@@ -63,14 +63,20 @@ namespace AdvancedDatastructures
 
         }
 
+        public void TestArrayList()
+        {
+ 
+        }
+
+
        public static string ReverseString_Rec(string str)
-{
-    Console.WriteLine(str);
-   if (str.Length <= 1)
-    return str;
-   else
-   return ReverseString_Rec(str.Substring(1)) +str[0];
-}
+        {
+            Console.WriteLine(str);
+            if (str.Length <= 1)
+                return str;
+            else
+                return ReverseString_Rec(str.Substring(1)) +str[0];
+        }
 
         //static string recRevString(String str, int len)
         //{
