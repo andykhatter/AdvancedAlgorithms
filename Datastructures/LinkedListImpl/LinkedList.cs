@@ -5,18 +5,14 @@ using System.Text;
 
 namespace AdvancedDatastructures.LinkedListImpl
 {
-    class LinkedList
+    public class LinkedList
     {
-        protected Node header;
-
-        public LinkedList()
-        {
-            header = new Node("header");
-        }
+        private Node header;
+       
+        private Node current;
 
         private Node Find(object item)
         {
-            Node current = new Node();
             current = header;
             while (current.nodeValue != item)
                 current = current.link;
@@ -24,7 +20,75 @@ namespace AdvancedDatastructures.LinkedListImpl
             return current;
         }
 
-        public void insert(object newNode, object after)
+
+        public void DeleteDuplicates()
+        {
+            Node toBeCompared = header;
+            
+            while (toBeCompared.link != null)
+            {
+                Node currentNode = header;
+                Node previousNode = null;
+               
+                while (currentNode.link != null)
+                {
+
+                    if (!currentNode.Equals(toBeCompared) && currentNode.nodeValue == toBeCompared.nodeValue)
+                    {
+                        previousNode.link = currentNode.link;
+                        currentNode = currentNode.link;
+                    }
+                    else
+                    {
+                        previousNode = currentNode;
+                        currentNode = currentNode.link;
+                        
+                    }  
+                }
+
+                toBeCompared = toBeCompared.link;
+
+            }
+        }
+
+        public void PrintLinkedList()
+        {
+            Node node=header;
+           
+            while (node.link != null)
+            {
+                Console.WriteLine(node.nodeValue.ToString());
+                node = node.link;
+            }
+            if (node != null)
+                Console.WriteLine(node.nodeValue.ToString());
+        }
+
+        public void Insert(object newNode)
+        {
+            if(header==null)
+            {
+               current=header=new Node(newNode);
+               return;
+            }
+
+            Node newNodeObj = new Node(newNode);
+            while(current.link!=null)
+                current=current.link;
+
+            current.link=newNodeObj;
+            current=newNodeObj;
+
+            return;
+
+            
+        }
+
+        public object GetCurrentValue()
+        {
+            return current.nodeValue;
+        }
+        public void InsertAfter(object newNode, object after)
         {
             Node newNodeObj = new Node(newNode);
             Node current = new Node();
@@ -44,9 +108,9 @@ namespace AdvancedDatastructures.LinkedListImpl
             return previousNode;
         }
 
-        public Node getFirst()
+        public object GetFirstElement()
         {
-            return header;
+            return header.nodeValue;
         }
         public void remove(object n)
         {
