@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F2F0592-C3DF-400F-96EF-0DD825903520}</ProjectGuid>
+    <ProjectGuid>{AECB81C8-04E0-4B49-A6B3-A4ECE3E35D2A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatastructureTests</RootNamespace>
-    <AssemblyName>DatastructureTests</AssemblyName>
+    <RootNamespace>InterviewQuestions</RootNamespace>
+    <AssemblyName>InterviewQuestions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,24 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayGaddamnListTest.cs" />
+    <Compile Include="ArraysAndString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Datastructures\AdvancedDatastructures.csproj">
-      <Project>{08527902-d9f7-4671-a497-92da44b5afe8}</Project>
-      <Name>AdvancedDatastructures</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataStructInterfaces\DataStructInterfaces.csproj">
-      <Project>{c661d455-9c8c-4e29-82a3-3b7901b4495a}</Project>
-      <Name>DataStructInterfaces</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

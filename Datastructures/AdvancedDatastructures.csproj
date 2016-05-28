@@ -64,6 +64,7 @@
     <Compile Include="ArrayListImpl\ArrayGaddamnList.cs" />
     <Compile Include="BSTimpl\BinarySearchTree.cs" />
     <Compile Include="BSTimpl\Node.cs" />
+    <Compile Include="GaddamnDictionaryImpl\GaddamnDictionary.cs" />
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\Vertex.cs" />
     <Compile Include="LinkedListImpl\LinkedList.cs" />

@@ -14,7 +14,7 @@ namespace AdvancedDatastructures.LinkedListImpl
           ListIter(LinkedList list)
         {
             theList = list;
-            current = theList.getFirst();
+            //current = theList.();
             previous = null;
 
 
